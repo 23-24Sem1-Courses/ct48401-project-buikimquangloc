@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'product_grid.dart';
+
 enum FilterOptions { favorites, all }
 
 class ProductsOverviewScreen extends StatefulWidget {
@@ -22,6 +24,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           buildCartIcon(),
         ],
       ),
+      body: ProductGrid(_showOnlyFavorites),
     );
   }
 

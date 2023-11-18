@@ -20,7 +20,7 @@ class ProductManager {
       price: 8.20,
       imageUrl:
           'https://media-cdn.tripadvisor.com/media/photo-s/19/1f/2c/0a/photo6jpg.jpg',
-      isFavorite: true,
+      isFavorite: false,
     ),
     Product(
       id: 'p3',
@@ -38,79 +38,79 @@ class ProductManager {
       price: 8.20,
       imageUrl:
           'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
-      isFavorite: false,
+      isFavorite: true,
     ),
     Product(
-      id: 'p4',
+      id: 'p5',
       name: 'Vegetarian Food 5',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
+          'https://mytanfeet.com/wp-content/uploads/2022/06/vegetarian-costa-rican-food.jpg',
       isFavorite: false,
     ),
     Product(
-      id: 'p4',
+      id: 'p6',
       name: 'Vegetarian Food 6',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
+          'https://www.slimmingworld.co.uk/wp-content/uploads/2020/09/lentilognese-slimming-world-blog.jpg',
       isFavorite: false,
     ),
     Product(
-      id: 'p4',
+      id: 'p7',
       name: 'Vegetarian Food 7',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-s/15/88/8d/01/vegan-burger.jpg',
       isFavorite: false,
     ),
     Product(
-      id: 'p4',
+      id: 'p8',
       name: 'Vegetarian Food 8',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
-      isFavorite: false,
+          'https://media.post.rvohealth.io/wp-content/uploads/2021/08/healthy-eating-food-sweet-potato-kale-bowl-grain-vegan-1296x728-header-800x728.jpg',
+      isFavorite: true,
     ),
     Product(
-      id: 'p4',
+      id: 'p9',
       name: 'Vegetarian Food 9',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
+          'https://www.bucketlisttummy.com/wp-content/uploads/2020/09/vegan-spinach-pasta-recipe.jpg',
       isFavorite: false,
     ),
     Product(
-      id: 'p4',
+      id: 'p10',
       name: 'Vegetarian Food 10',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
-      isFavorite: false,
+          'https://images.hindustantimes.com/img/2021/09/21/550x309/Vegan_food_products_to_get_their_own_FSSAI-launched_logo._Check_how_it_will_look_1632230924969_1632230925248.jpg',
+      isFavorite: true,
     ),
     Product(
-      id: 'p4',
+      id: 'p11',
       name: 'Vegetarian Food 11',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
+          'https://images.prismic.io/netmums/a1a9f034-7b4e-4ad4-83c1-97527784f2bc_vegan+diet+when+pregnant.jpg',
       isFavorite: false,
     ),
     Product(
-      id: 'p4',
+      id: '12',
       name: 'Vegetarian Food 12',   
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
-          'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
-      isFavorite: false,
+          'https://images.immediate.co.uk/production/volatile/sites/30/2018/06/Vegan-salad-bowl-499145d.jpg',
+      isFavorite: true,
     ),
 
   ];
