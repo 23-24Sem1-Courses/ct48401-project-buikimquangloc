@@ -2,15 +2,11 @@
 
 Học kỳ 1, Năm học 2023-2024
 
-**MSSV 1** : 
+**MSSV 1** : B2014581
 
-**Họ tên SV 1**:
+**Họ tên SV 1**: Bùi Kim Quang Lộc
 
-**MSSV 2**:
+**Lớp học phần**: CT484_01
 
-**Họ tên SV 2**:
-
-**Lớp học phần**:
-
-**Tên dự án**:
+**Tên dự án**: Shop V.Food (Shop bán đồ ăn)
 
