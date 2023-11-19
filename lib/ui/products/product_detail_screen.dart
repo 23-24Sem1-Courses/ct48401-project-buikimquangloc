@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../models/product.dart';
 
 class ProductDetailScreen extends StatelessWidget {
+  static const routeName = '/product_detail';
   const ProductDetailScreen(
     this.product, {
     super.key,
@@ -14,15 +15,14 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView( // widget con có thể cuộn được
+      body: SingleChildScrollView(
+        // widget con có thể cuộn được
         child: Column(
           children: <Widget>[
             SizedBox(
               height: 300,
               width: double.infinity,
-              child: Image.network(
-                product.imageUrl,
-                fit: BoxFit.cover),
+              child: Image.network(product.imageUrl, fit: BoxFit.cover),
             ),
             const SizedBox(height: 10),
             Text(
@@ -32,7 +32,7 @@ class ProductDetailScreen extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
-            const SizedBox( height: 10),
+            const SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: double.infinity,

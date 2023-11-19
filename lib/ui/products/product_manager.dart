@@ -1,12 +1,15 @@
+
+import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import '../../models/product.dart';
 
 // Danh sách các sản phẩm
 
-class ProductManager {
+class ProductManager with ChangeNotifier {
   final List<Product> items = [
     Product(
       id: 'p1',
-      name: 'Vegetarian Food 1',   
+      name: 'Vegetarian Food 1',
       description: 'I am enjoy.',
       price: 8.20,
       imageUrl:
@@ -15,7 +18,7 @@ class ProductManager {
     ),
     Product(
       id: 'p2',
-      name: 'Vegetarian Food 2',   
+      name: 'Vegetarian Food 2',
       description: 'I like it.',
       price: 8.20,
       imageUrl:
@@ -24,7 +27,7 @@ class ProductManager {
     ),
     Product(
       id: 'p3',
-      name: 'Vegetarian Food 3',   
+      name: 'Vegetarian Food 3',
       description: 'I feel delicios.',
       price: 8.20,
       imageUrl:
@@ -33,7 +36,7 @@ class ProductManager {
     ),
     Product(
       id: 'p4',
-      name: 'Vegetarian Food 4',   
+      name: 'Vegetarian Food 4',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -42,7 +45,7 @@ class ProductManager {
     ),
     Product(
       id: 'p5',
-      name: 'Vegetarian Food 5',   
+      name: 'Vegetarian Food 5',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -51,7 +54,7 @@ class ProductManager {
     ),
     Product(
       id: 'p6',
-      name: 'Vegetarian Food 6',   
+      name: 'Vegetarian Food 6',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -60,7 +63,7 @@ class ProductManager {
     ),
     Product(
       id: 'p7',
-      name: 'Vegetarian Food 7',   
+      name: 'Vegetarian Food 7',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -69,7 +72,7 @@ class ProductManager {
     ),
     Product(
       id: 'p8',
-      name: 'Vegetarian Food 8',   
+      name: 'Vegetarian Food 8',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -78,7 +81,7 @@ class ProductManager {
     ),
     Product(
       id: 'p9',
-      name: 'Vegetarian Food 9',   
+      name: 'Vegetarian Food 9',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -87,7 +90,7 @@ class ProductManager {
     ),
     Product(
       id: 'p10',
-      name: 'Vegetarian Food 10',   
+      name: 'Vegetarian Food 10',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -96,7 +99,7 @@ class ProductManager {
     ),
     Product(
       id: 'p11',
-      name: 'Vegetarian Food 11',   
+      name: 'Vegetarian Food 11',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
@@ -105,14 +108,13 @@ class ProductManager {
     ),
     Product(
       id: '12',
-      name: 'Vegetarian Food 12',   
+      name: 'Vegetarian Food 12',
       description: 'I am feedbacked',
       price: 8.20,
       imageUrl:
           'https://images.immediate.co.uk/production/volatile/sites/30/2018/06/Vegan-salad-bowl-499145d.jpg',
       isFavorite: true,
     ),
-
   ];
 
   int get itemCount {
@@ -126,4 +128,41 @@ class ProductManager {
   List<Product> get favoriteItems {
     return items.where((item) => item.isFavorite).toList();
   }
+
+  Product? findById(String id) {
+    try {
+      return items.firstWhere((item) => item.id == id);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  void addProduct(Product product) {
+    items.add(
+      product.copyWith(
+        id: 'p${DateTime.now().toIso8601String()}',
+      ),
+    );
+  }
+
+  void updateProduct(Product product) {
+    final index = items.indexWhere((item) => item.id == product.id);
+    if (index >= 0) {
+      items[index] = product;
+      notifyListeners();
+    }
+  }
+
+  void toggleFavoriteStatus(Product product) {
+    final savedStatus = product.isFavorite;
+    product.isFavorite = !savedStatus;
+  }
+
+  void deleteProduct(String id) {
+    final index = items.indexWhere((item) => item.id == id);
+    items.removeAt(index);
+    notifyListeners();
+  }
+
+  
 }

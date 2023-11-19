@@ -1,6 +1,10 @@
+import 'package:ct484_project/ui/cart/cart_manager.dart';
+import 'package:ct484_project/ui/cart/cart_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import '../shared/app_drawer.dart';
 import 'product_grid.dart';
+import 'top_right_badge.dart';
 
 enum FilterOptions { favorites, all }
 
@@ -24,6 +28,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           buildCartIcon(),
         ],
       ),
+      drawer: const AppDrawer(),
       body: ProductGrid(_showOnlyFavorites),
     );
   }
@@ -56,12 +61,19 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   }
 
   Widget buildCartIcon() {
-    return IconButton(
-      icon: const Icon(
-        Icons.shopping_cart,
-      ),
-      onPressed: () {
-        print("Cart Screen");
+    return Consumer<CartManager>(
+      builder: (ctx, cartManager, child) {
+        return TopRightBadge(
+          data: cartManager.productCount,
+          child: IconButton(
+            icon: const Icon(
+              Icons.shopping_cart,
+            ),
+            onPressed: () {
+              Navigator.of(ctx).pushNamed(CartScreen.routeName);
+            },
+          ),
+        );
       },
     );
   }
