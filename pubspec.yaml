@@ -31,5 +31,4 @@ flutter:
     - family: Anton
       fonts: 
         - asset: assets/fonts/Anton-Regular.ttf 
-  assets:
-    - assets/images/  # Thư mục chứa các tệp tin ảnh.
+.
