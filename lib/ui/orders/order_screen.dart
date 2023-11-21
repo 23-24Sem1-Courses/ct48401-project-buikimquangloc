@@ -3,14 +3,17 @@ import 'package:provider/provider.dart';
 import 'order_manager.dart';
 import 'order_item_cart.dart';
 import '../shared/app_drawer.dart';
+import 'package:logger/logger.dart';
 
 class OrderScreen extends StatelessWidget {
   static const routeName = '/order';
-  const OrderScreen({super.key});
+  final Logger _logger = Logger();
+
+  OrderScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print('building orders');
+    _logger.d('building orders');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Orders'),

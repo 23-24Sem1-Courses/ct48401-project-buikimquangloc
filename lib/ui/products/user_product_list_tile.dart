@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../../models/product.dart';
 import 'edit_product_screen.dart';
+import 'package:logger/logger.dart';
 
 class UserProductListTile extends StatelessWidget {
   final Product product;
-  const UserProductListTile(
+  UserProductListTile(
     this.product, {
     super.key,
   });
+
+  final Logger _logger = Logger();
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +23,15 @@ class UserProductListTile extends StatelessWidget {
         width: 100,
         child: Row(
           children: <Widget>[
-            EditButton(context),
-            DeleteButton(context),
+            editButton(context),
+            deleteButton(context),
           ],
         ),
       ),
     );
   }
 
-  Widget EditButton(BuildContext context) {
+  Widget editButton(BuildContext context) {
     return IconButton(
       icon: const Icon(Icons.edit),
       onPressed: () {
@@ -39,13 +42,12 @@ class UserProductListTile extends StatelessWidget {
       },
       color: Theme.of(context).primaryColor,
     );
-
   }
 
-  Widget DeleteButton(BuildContext context) {
+  Widget deleteButton(BuildContext context) {
     return IconButton(
       onPressed: () {
-        print('Delete a product');
+        _logger.d('Delete a product');
       },
       icon: const Icon(Icons.delete),
       color: Theme.of(context).colorScheme.error,

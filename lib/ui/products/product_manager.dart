@@ -10,7 +10,7 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p1',
       name: 'Vegetarian Food 1',
-      description: 'Đem lại sự tuyệt vời cho người dùng với màu sắc món ăn bắt mắt, hương vị thơm ngon.',
+      description: 'I am enjoy.',
       price: 8.20,
       imageUrl:
           'https://images.chinahighlights.com/allpicture/2017/10/015430cd96d3447a9e7d2a2c_cut_800x500_61.jpg',
@@ -19,8 +19,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p2',
       name: 'Vegetarian Food 2',
-      description: 'Với nhiều sự đánh giá tích cực từ người dùng, cửa hàng xin giới thiệu đến bạn món ăn mới vô cùng độc đáo hấp dẫn.',
-      price: 7.9,
+      description: 'I like it.',
+      price: 8.20,
       imageUrl:
           'https://media-cdn.tripadvisor.com/media/photo-s/19/1f/2c/0a/photo6jpg.jpg',
       isFavorite: false,
@@ -28,8 +28,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p3',
       name: 'Vegetarian Food 3',
-      description: 'Mong bạn phản hồi về cửa hàng về chất lượng sản phẩm.',
-      price: 6.1,
+      description: 'I feel delicios.',
+      price: 8.20,
       imageUrl:
           'https://images.radio-canada.ca/v1/alimentation/recette/16x9/sandiwch-vietnamien-banh-mi.jpg',
       isFavorite: true,
@@ -37,8 +37,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p4',
       name: 'Vegetarian Food 4',
-      description: 'Thơm ngon, béo ngậy, hương vị đậm đà, chỉ có shop V.Food.',
-      price: 9.4,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://images.squarespace-cdn.com/content/v1/5f75b104e69a376e522869b9/1623520579055-3A2LDQ6PO81B7VVRIH0M/RED_0167.jpg',
       isFavorite: true,
@@ -46,8 +46,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p5',
       name: 'Vegetarian Food 5',
-      description: 'Bạn thấy món ăn thế nào? Vừa béo, vừa ngọt, không gắt gỏng như bà hàng xóm nhà bên, bạn nên chọn đến V.Food.',
-      price: 7.1,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://mytanfeet.com/wp-content/uploads/2022/06/vegetarian-costa-rican-food.jpg',
       isFavorite: false,
@@ -55,8 +55,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p6',
       name: 'Vegetarian Food 6',
-      description: 'Hôm nay bạn thế nào? Vào shop order đồ ăn đi, ngon lắm.',
-      price: 6.4,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://www.slimmingworld.co.uk/wp-content/uploads/2020/09/lentilognese-slimming-world-blog.jpg',
       isFavorite: false,
@@ -64,8 +64,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p7',
       name: 'Vegetarian Food 7',
-      description: 'Món ăn hôm nay ngon tuyệt, cùng ăn với shop V.Food nhé!!',
-      price: 8.35,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://media-cdn.tripadvisor.com/media/photo-s/15/88/8d/01/vegan-burger.jpg',
       isFavorite: false,
@@ -73,8 +73,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p8',
       name: 'Vegetarian Food 8',
-      description: 'Are you ok? Bạn có muốn chúng mình cùng đi ăn?? Đến V.Food đi.. =))',
-      price: 8.13,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://media.post.rvohealth.io/wp-content/uploads/2021/08/healthy-eating-food-sweet-potato-kale-bowl-grain-vegan-1296x728-header-800x728.jpg',
       isFavorite: true,
@@ -82,8 +82,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p9',
       name: 'Vegetarian Food 9',
-      description: 'Giời ơi!! Nay sale kinh vậy, chắc phải đi săn sale thôi, đồ ăn mà cũng giảm giá :) !!',
-      price: 8.1,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://www.bucketlisttummy.com/wp-content/uploads/2020/09/vegan-spinach-pasta-recipe.jpg',
       isFavorite: false,
@@ -91,8 +91,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p10',
       name: 'Vegetarian Food 10',
-      description: 'Trời mưa em ở trong nhà, lướt trên điện thoại có đồ ăn ngay!!',
-      price: 7.77,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://images.hindustantimes.com/img/2021/09/21/550x309/Vegan_food_products_to_get_their_own_FSSAI-launched_logo._Check_how_it_will_look_1632230924969_1632230925248.jpg',
       isFavorite: true,
@@ -100,8 +100,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: 'p11',
       name: 'Vegetarian Food 11',
-      description: 'Mùa đông lạnh lẽo lắm, kiếm món gì nóng hổi ăn đi ',
-      price: 7.80,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://images.prismic.io/netmums/a1a9f034-7b4e-4ad4-83c1-97527784f2bc_vegan+diet+when+pregnant.jpg',
       isFavorite: false,
@@ -109,8 +109,8 @@ class ProductManager with ChangeNotifier {
     Product(
       id: '12',
       name: 'Vegetarian Food 12',
-      description: 'Dạo này thời tiết khó ở, ăn nhiều rau củ vào nha!!!',
-      price: 7.6,
+      description: 'I am feedbacked',
+      price: 8.20,
       imageUrl:
           'https://images.immediate.co.uk/production/volatile/sites/30/2018/06/Vegan-salad-bowl-499145d.jpg',
       isFavorite: true,

@@ -1,15 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'edit_product_screen.dart';
 import 'user_product_list_tile.dart';
 import 'product_manager.dart';
 import '../shared/app_drawer.dart';
+import 'package:logger/logger.dart';
 
 class UserProductScreen extends StatelessWidget {
   static const routeName = '/user_product';
 
-  const UserProductScreen({Key? key});
+  UserProductScreen({super.key});
+
+  final Logger _logger = Logger();
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +20,18 @@ class UserProductScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Your products'),
         actions: <Widget>[
-          AddButton(context),
+          addButton(context),
         ],
       ),
       drawer: const AppDrawer(),
       body: RefreshIndicator(
-        onRefresh: () async => print('refresh'),
-        child: UserProductListView(productManager),
+        onRefresh: () async => _logger.d('refresh'),
+        child: userProductListView(productManager),
       ),
     );
   }
 
-  Widget UserProductListView(ProductManager productManager) {
+  Widget userProductListView(ProductManager productManager) {
     return Consumer<ProductManager>(
       builder: (context, productManager, child) {
         return ListView.builder(
@@ -47,7 +49,7 @@ class UserProductScreen extends StatelessWidget {
     );
   }
 
-  Widget AddButton(BuildContext context) {
+  Widget addButton(BuildContext context) {
     return IconButton(
       icon: const Icon(Icons.add),
       onPressed: () {
@@ -58,4 +60,3 @@ class UserProductScreen extends StatelessWidget {
     );
   }
 }
-

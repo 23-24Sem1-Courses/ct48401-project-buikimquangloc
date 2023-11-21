@@ -36,7 +36,7 @@ class ProductGridTile extends StatelessWidget {
 
   Widget buildGridFooterBar(BuildContext context) {
     return GridTileBar(
-      backgroundColor: Colors.black87,
+      backgroundColor: const Color.fromARGB(255, 67, 90, 103),
       leading: ValueListenableBuilder<bool>(
         valueListenable: product.isFavoriteListenable,
         builder: (context, isFavorite, child) {

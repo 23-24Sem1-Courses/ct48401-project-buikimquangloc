@@ -64,7 +64,7 @@ class CartScreen extends StatelessWidget {
                   color: Theme.of(context).primaryTextTheme.titleLarge?.color,
                 ),
               ),
-              backgroundColor: Theme.of(context).primaryColor,
+              backgroundColor: Theme.of(context).primaryColorDark,
             ),
             TextButton(
               onPressed: cart.totalAmount <= 0

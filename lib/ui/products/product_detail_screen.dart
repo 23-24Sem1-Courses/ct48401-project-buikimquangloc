@@ -28,7 +28,7 @@ class ProductDetailScreen extends StatelessWidget {
             Text(
               '\$${product.price}',
               style: const TextStyle(
-                color: Colors.indigoAccent,
+                color: Color.fromARGB(255, 102, 95, 230),
                 fontSize: 20,
               ),
             ),
