@@ -37,13 +37,13 @@ class _AuthCardState extends State<AuthCard> {
 
     try {
       if (_authMode == AuthMode.login) {
-        // Log user in
+      
         await context.read<AuthManager>().login(
               _authData['email']!,
               _authData['password']!,
             );
       } else {
-        // Sign user up
+       
         await context.read<AuthManager>().signup(
               _authData['email']!,
               _authData['password']!,
@@ -139,7 +139,7 @@ class _AuthCardState extends State<AuthCard> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).primaryColorDark,
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
         textStyle: TextStyle(
           color: Theme.of(context).primaryTextTheme.titleLarge?.color,

@@ -81,4 +81,10 @@ class CartManager with ChangeNotifier {
     items = {};
     notifyListeners();
   }
+  void cancelOrder(String productId) {
+    if (items.containsKey(productId)) {
+      items.remove(productId);
+      notifyListeners();
+    }
+  }
 }

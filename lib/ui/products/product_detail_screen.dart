@@ -1,7 +1,7 @@
-// giao diện trang chi tiết sản phẩm
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../models/product.dart';
+import '../cart/cart_manager.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   static const routeName = '/product_detail';
@@ -12,11 +12,26 @@ class ProductDetailScreen extends StatelessWidget {
 
   final Product product;
 
+  void addToCart(BuildContext context) {
+    final cart = context.read<CartManager>();
+    cart.addItem(product);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Sản phẩm đã được thêm vào giỏ hàng'),
+        action: SnackBarAction(
+          label: 'Hoàn tác',
+          onPressed: () {
+            cart.removeItem(product.id!);
+          },
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        // widget con có thể cuộn được
         child: Column(
           children: <Widget>[
             SizedBox(
@@ -28,7 +43,7 @@ class ProductDetailScreen extends StatelessWidget {
             Text(
               '\$${product.price}',
               style: const TextStyle(
-                color: Color.fromARGB(255, 102, 95, 230),
+                color:  Color.fromARGB(255, 102, 95, 230),
                 fontSize: 20,
               ),
             ),
@@ -41,7 +56,14 @@ class ProductDetailScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 softWrap: true,
               ),
-            )
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                addToCart(context); // Gọi hàm để thêm sản phẩm vào giỏ hàng
+              },
+              child: const Text('Thêm vào giỏ hàng'),
+            ),
           ],
         ),
       ),

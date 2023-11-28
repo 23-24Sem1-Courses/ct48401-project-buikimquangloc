@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'edit_product_screen.dart';
 import 'user_product_list_tile.dart';
 import 'product_manager.dart';
 import '../shared/app_drawer.dart';
-import 'package:logger/logger.dart';
 
 class UserProductScreen extends StatelessWidget {
   static const routeName = '/user_product';
 
-  UserProductScreen({super.key});
-
-  final Logger _logger = Logger();
+  const UserProductScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +15,10 @@ class UserProductScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your products'),
-        actions: <Widget>[
-          addButton(context),
-        ],
       ),
       drawer: const AppDrawer(),
       body: RefreshIndicator(
-        onRefresh: () async => _logger.d('refresh'),
+        onRefresh: () async => print('refresh'),
         child: userProductListView(productManager),
       ),
     );
@@ -49,14 +42,5 @@ class UserProductScreen extends StatelessWidget {
     );
   }
 
-  Widget addButton(BuildContext context) {
-    return IconButton(
-      icon: const Icon(Icons.add),
-      onPressed: () {
-        Navigator.of(context).pushNamed(
-          EditProductScreen.routeName,
-        );
-      },
-    );
-  }
+  
 }

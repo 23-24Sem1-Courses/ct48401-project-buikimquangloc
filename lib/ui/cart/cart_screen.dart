@@ -1,15 +1,11 @@
-
 import 'package:ct484_project/ui/orders/order_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'cart_item_card.dart';
 import 'cart_manager.dart';
-
 class CartScreen extends StatelessWidget {
   static const routeName = '/cart';
-
   const CartScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
       final cart = context.watch<CartManager>();
@@ -30,7 +26,6 @@ class CartScreen extends StatelessWidget {
       ),
     );
   }
-
   Widget buildCartDetails(CartManager cart) {
     return ListView(
       children: cart.productEntries
@@ -43,7 +38,6 @@ class CartScreen extends StatelessWidget {
           .toList(),
     );
   }
-
   Widget buildCartSumary(CartManager cart, BuildContext context) {
     return Card(
       margin: const EdgeInsets.all(15),
@@ -64,7 +58,7 @@ class CartScreen extends StatelessWidget {
                   color: Theme.of(context).primaryTextTheme.titleLarge?.color,
                 ),
               ),
-              backgroundColor: Theme.of(context).primaryColorDark,
+              backgroundColor: Theme.of(context).primaryColor,
             ),
             TextButton(
               onPressed: cart.totalAmount <= 0

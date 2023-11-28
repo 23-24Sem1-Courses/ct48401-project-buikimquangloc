@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../models/product.dart';
 import 'edit_product_screen.dart';
-import 'package:logger/logger.dart';
 
 class UserProductListTile extends StatelessWidget {
   final Product product;
-  UserProductListTile(
+  const UserProductListTile(
     this.product, {
     super.key,
   });
-
-  final Logger _logger = Logger();
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +16,7 @@ class UserProductListTile extends StatelessWidget {
       leading: CircleAvatar(
         backgroundImage: NetworkImage(product.imageUrl),
       ),
+      title: Text(product.name),
       trailing: SizedBox(
         width: 100,
         child: Row(
@@ -42,12 +40,13 @@ class UserProductListTile extends StatelessWidget {
       },
       color: Theme.of(context).primaryColor,
     );
+
   }
 
   Widget deleteButton(BuildContext context) {
     return IconButton(
       onPressed: () {
-        _logger.d('Delete a product');
+        print('Delete a product');
       },
       icon: const Icon(Icons.delete),
       color: Theme.of(context).colorScheme.error,

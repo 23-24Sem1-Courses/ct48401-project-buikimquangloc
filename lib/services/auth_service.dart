@@ -4,7 +4,6 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:logger/logger.dart';
 
 import '../models/http_exception.dart';
 import '../models/auth_token.dart';
@@ -12,8 +11,6 @@ import '../models/auth_token.dart';
 class AuthService {
   static const _authTokenKey = 'authToken';
   late final String? _apiKey;
-
-  final Logger _logger = Logger();
 
   AuthService() {
     _apiKey = dotenv.env['FIREBASE_API_KEY'];
@@ -47,7 +44,7 @@ class AuthService {
 
       return authToken;
     } catch (error) {
-      _logger.d(error);
+      print(error);
       rethrow;
     }
   }
